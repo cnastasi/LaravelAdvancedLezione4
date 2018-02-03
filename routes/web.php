@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/profile/me', 'UserProfileController@me')->middleware('auth');
+Route::get('/profile/{id}', 'UserProfileController@show')->middleware('auth');
