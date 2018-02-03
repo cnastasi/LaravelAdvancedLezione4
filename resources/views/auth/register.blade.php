@@ -61,6 +61,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
+                            <label for="age" class="col-md-4 control-label">Age</label>
+
+                            <div class="col-md-6">
+                                <input id="age" type="number" class="form-control" name="age" value="{{ old('age') }}" required>
+
+                                @if ($errors->has('age'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('age') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
