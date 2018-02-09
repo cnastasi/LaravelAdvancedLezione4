@@ -14,7 +14,7 @@ class AddAgeToUsersTableMigration extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->unsignedInteger('age');
+            $table->unsignedInteger('age')->default(18);
         });
     }
 
